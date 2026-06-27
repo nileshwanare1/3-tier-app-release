@@ -2,7 +2,7 @@
 resource "aws_iam_role" "cluster_role" {
   name = "eks-role-cluster"
   assume_role_policy = jsonencode({
-    Version = "2026-06-27"
+    Version = "2012-10-17"
     Statement = [
       {
         Action = [
@@ -36,7 +36,7 @@ resource "aws_iam_role" "nodegroup_role" {
         Service = "ec2.amazonaws.com"
       }
     }]
-    Version = "2026-06-27"
+    Version = "2012-10-17"
   })
 }
 
