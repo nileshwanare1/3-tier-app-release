@@ -28,19 +28,19 @@ resource "aws_eks_node_group" "example" {
 }
 
 resource "aws_launch_template" "eks_node_launch_template" {
-  name = "${aws_eks_cluster.eks_cluster.name}-node-template" 
+  name = "${aws_eks_cluster.eks_cluster.name}-node-template"
 
   instance_type = "t2.medium"
 
   metadata_options {
-    http_endpoint             = "enabled"
-    http_tokens               = "required"
-    http_put_response_hop_limit = 2 
+    http_endpoint               = "enabled"
+    http_tokens                 = "required"
+    http_put_response_hop_limit = 2
   }
   tags = {
     Name = "${aws_eks_cluster.eks_cluster.name}-node-template"
   }
   lifecycle {
-    create_before_destroy = true 
+    create_before_destroy = true
   }
 }
