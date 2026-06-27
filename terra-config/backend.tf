@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "pravesh-terra-state-bucket"  # Change if the name already exists. 
+    bucket         = "nilesh-terra-state-bucket"  # Change if the name already exists. 
     key            = "eks/terraform.tfstate"       
-    region         = "us-east-1"                   
+    region         = "ap-south-1"                   
     encrypt        = true
   }
 }

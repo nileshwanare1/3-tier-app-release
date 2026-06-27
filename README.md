@@ -48,7 +48,7 @@ Make sure you have the following installed and configured:
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/Pravesh-Sudha/3-tier-app-Deployment.git
+git clone https://github.com/nileshwanare1/3-tier-app-release.git
 cd 3-tier-app-Deployment/
 ```
 
@@ -68,9 +68,9 @@ Use region `us-east-1` and output `json`.
 
 ```bash
 aws s3api create-bucket \
-  --bucket pravesh-terra-state-bucket \
-  --region us-east-1 \
-  --create-bucket-configuration LocationConstraint=us-east-1
+  --bucket arn:aws:s3:::globalnamebspacebucket \
+  --region ap-south-1 \
+  --create-bucket-configuration LocationConstraint=ap-south-1
 
 aws s3api put-bucket-versioning \
   --bucket pravesh-terra-state-bucket \
