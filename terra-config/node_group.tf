@@ -30,11 +30,7 @@ resource "aws_eks_node_group" "example" {
 resource "aws_launch_template" "eks_node_launch_template" {
   name = "${aws_eks_cluster.eks_cluster.name}-node-template"
 
-<<<<<<< HEAD
-   instance_type = "t3.medium"
-=======
-  instance_type = "t3.micro"
->>>>>>> 524fe0e (node-group.tf file updated)
+ instance_type = "t3.medium"
 
   metadata_options {
     http_endpoint               = "enabled"
